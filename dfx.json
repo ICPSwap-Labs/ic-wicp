@@ -1,0 +1,24 @@
+{
+  "canisters": {
+    "WrapToken": {
+      "main": "src/WrapToken.mo"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "vessel sources"
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    },
+    "ic": {
+      "providers": ["https://ic0.app"],
+      "type": "persistent"
+    }
+  },
+  "version": 1
+}
