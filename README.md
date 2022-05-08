@@ -87,7 +87,7 @@ dfx canister --network=ic call 5xnja-6aaaa-aaaan-qad4a-cai transfer '(record {to
 
 Open ICPSwap 1.0 and come to the Wallet page. Click the Token tab, then you will find the token list. Click the transfer button of WICP, input the Account and Amount in the new window.
 
-![transfer-1]("https://user-images.githubusercontent.com/98505086/167278147-19644e85-e39b-4328-901a-851be121ec76.png)
+<img width="1409" alt="transfer-1" src="https://user-images.githubusercontent.com/98505086/167295214-ae97a2e3-13f9-4765-a0a4-23d0f134c239.png">
 ![transfer-2](https://user-images.githubusercontent.com/98505086/167278150-3c28c3b5-e3db-4b08-a51e-915767892ef9.png)
 
 ---
