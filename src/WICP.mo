@@ -36,7 +36,7 @@ import ExtBlock "./ext/Block";
 import ExtLedger "./ext/Ledger";
 import ExtWrapper "./ext/Wrapper";
 
-shared(msg) actor class WrapToken(init_name: Text, init_symbol: Text, init_decimals: Nat8, init_supply: ExtCore.Balance, init_owner: Principal) = this {
+shared(msg) actor class WICP(init_name: Text, init_symbol: Text, init_decimals: Nat8, init_supply: ExtCore.Balance, init_owner: Principal) = this {
     
     type AccountIdentifier = ExtCore.AccountIdentifier;
     type SubAccount = ExtCore.SubAccount;

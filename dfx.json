@@ -1,7 +1,7 @@
 {
   "canisters": {
-    "WrapToken": {
-      "main": "src/WrapToken.mo"
+    "wicp": {
+      "main": "src/WICP.mo"
     }
   },
   "defaults": {
