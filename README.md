@@ -1,12 +1,13 @@
 # IC-Wrapped ICP(WICP)
 
-Wrapped ICP (WICP) is a wrapped version of the IC's native token, ICP. Each WICP will be backed 1:1 with ICP, meaning that 1 WICP will always have the exact same value as 1 ICP. The only difference is that, unlike ICP, WICP uses the EXT fungible token standard that is specifically designed to allow for interoperability between dApps and other tokens.
+Wrapped ICP(WICP) is the wrapped token of ICP, the native token of the Internet Computer network. It has backed 1:1 with ICP and the same value by way of Canister's full control over ICP!
+WICP uses the EXT fungible token standard to allow interoperability between DApps and other tokens. Moreover, integrate ICP with DeFi to solve the problem of ICP's lack of approval function.
 
 - [Wrapped ICP Website](https://app.icpswap.com/swap/wicp)
 
 ---
 
-## 🧰 Interacting with Wrapped ICP (WICP) - On Mainnet (DFX)
+## Interacting with Wrapped ICP (WICP) - On Mainnet (DFX)
 
 In order to interact with the Internet Computer mainnet version of the Wrapped ICP (WICP) canister, you need the address.
 
@@ -146,10 +147,10 @@ dfx canister --network=ic call --query 5xnja-6aaaa-aaaan-qad4a-cai setFeeTo '(va
 Returns the balance of user `who`.
 
 ```bash
-​​dfx canister --network=ic call --query 5xnja-6aaaa-aaaan-qad4a-cai balance '(record {token="WICP"; user=variant {principal=principal "who-principal"}})'
+  dfx canister --network=ic call --query 5xnja-6aaaa-aaaan-qad4a-cai balance '(record {token="WICP"; user=variant {principal=principal "who-principal"}})'
 ```
 ```bash
-​​dfx canister --network=ic call --query 5xnja-6aaaa-aaaan-qad4a-cai balance '(record {token="WICP"; user=variant {address="who-address"}})'"(principal \"who-account-principal\")"
+  dfx canister --network=ic call --query 5xnja-6aaaa-aaaan-qad4a-cai balance '(record {token="WICP"; user=variant {address="who-address"}})'"(principal \"who-account-principal\")"
 ```
 
 ---
@@ -263,16 +264,16 @@ dfx canister --network=ic call --query 5xnja-6aaaa-aaaan-qad4a-cai extensions
 
 ---
 
-## 🙏 Contributing
+## Contributing
 
 Create branches from the `main` branch and name it in accordance to **conventional commits** [here](https://www.conventionalcommits.org/en/v1.0.0/), or follow the examples bellow:
 
 ```txt
-test: 💍 Adding missing tests
-feat: 🎸 A new feature
-fix: 🐛 A bug fix
-chore: 🤖 Build process or auxiliary tool changes
-docs: ✏️ Documentation only changes
-refactor: 💡 A code change that neither fixes a bug or adds a feature
-style: 💄 Markup, white-space, formatting, missing semi-colons...
+test: Adding missing tests
+feat: A new feature
+fix: A bug fix
+chore: Build process or auxiliary tool changes
+docs: Documentation only changes
+refactor: A code change that neither fixes a bug or adds a feature
+style: Markup, white-space, formatting, missing semi-colons...
 ```
