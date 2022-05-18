@@ -18,17 +18,17 @@ You have to use this address (Canister ID) to make your calls, with the exceptio
 
 ---
 
-### Deposit ICP to mint an WICP balance - mint
+### Deposit ICP to mint a WICP balance - mint
 
 #### In command
 
-Using the mint method is done in two steps. First, we need to make a transfer call at the ICP ledger to the WICP account ID. Using the following command you’ll be returned the block height when your transaction was approved.
+Using the mint method is done in two steps. First, we need to make a transfer call at the ICP ledger to the WICP account ID. Using the following command you’ll be returned the block height when your transaction has been approved.
 
 ```bash
 dfx ledger --network ic transfer "e994ad0378bb902896b55dd5a69a72e7fb2762bba50b32f66f77d2d99d07ac94" --amount value --memo 0
 ```
 
-Now that we have the blockHeight of our ICP transfer, we can call the mint method on the WICP canister.
+Now that we have the block height of our ICP transfer, we can call the mint method on the WICP canister.
 
 ```bash
 dfx canister --network=ic call 5xnja-6aaaa-aaaan-qad4a-cai mint '(record {to=variant {principal=principal "yourPrincipalId"}; blockHeight=yourBlockHeight:nat64})'
@@ -51,7 +51,7 @@ Calling withdraw unwraps your WICP, burns it, and then unlocks and sends ICP fro
 
 #### In command
 
-The Withdraw method takes two parameters, ‘amount’ and ‘to’. Amount is an integer that represents the amount of WICP you’d like to withdraw to ICP. To is a string that should be the Principal ID or Account ID that you wish the ICP to be transferred to.
+The Withdraw method takes two parameters, ‘amount’ and ‘to’. ‘Amount‘ is an integer that represents the amount of WICP you’d like to withdraw to ICP. ‘To‘ is a string that should be the Principal ID or Account ID that you wish the ICP to be transferred to.
 
 ```bash
 dfx canister --network=ic call 5xnja-6aaaa-aaaan-qad4a-cai withdraw '(record {to=variant {principal=principal "yourPrincipalId"}; amount=value:nat})'
@@ -62,7 +62,7 @@ dfx canister --network=ic call 5xnja-6aaaa-aaaan-qad4a-cai withdraw '(record {to
 
 #### In Website
 
-the Unwarp feature is to restore the WICP to ICP, click the button as shown, exchange the WICP and ICP location, enter the WICP amount, and click the "Unwrap" button.
+The unwarp feature is to restore the WICP to ICP, click the button as shown, exchange the WICP and ICP location, enter the WICP amount, and click the "Unwrap" button.
 
 ![wicp-unwrap-1](https://user-images.githubusercontent.com/98505086/167868770-cb3c871e-0209-4c48-847b-98130c77c111.jpg)
 ![wicp-unwrap-2](https://user-images.githubusercontent.com/98505086/167868786-c73d83fc-dcb8-463c-accd-98bf8b88a884.jpg)
@@ -86,7 +86,7 @@ dfx canister --network=ic call 5xnja-6aaaa-aaaan-qad4a-cai transfer '(record {to
 
 #### In Website
 
-Open ICPSwap 1.0 and come to the Wallet page. Click the Token tab, then you will find the token list. Click the transfer button of WICP, input the Account and Amount in the new window.
+Open ICPSwap website and come to the Wallet page. Click the Token tab, then you will find the token list. Click the transfer button of WICP, input the Account and Amount in the new window.
 
 ![transfer-1](https://user-images.githubusercontent.com/98505086/167875682-54fccb2c-c00c-445a-9990-87343f2c03d0.png)
 ![transfer-2](https://user-images.githubusercontent.com/98505086/167868905-1ba7935d-2c84-4ac4-9ffc-8c03a9257832.jpg)
@@ -97,7 +97,7 @@ Open ICPSwap 1.0 and come to the Wallet page. Click the Token tab, then you will
 
 You can set an allowance using this method, giving a third-party access to a specific number of tokens they can withdraw from your balance if they want.
 
-An allowance permits the ‘spender’ (Principal) to withdraw tokens from your account or your subAccount, up to the ‘value’ (Nat) amount. If it is called again it overwrites the current allowance with ‘value’ (Nat). There is no upper limit for value, you can approve a larger value than you have, but 3rd parties are still bound by the upper limit of your account balance.
+An allowance permits the ‘spender’ (Principal) to withdraw tokens from your account or your sub-account, up to the ‘value’ (Nat) amount. If it is called again, it overwrites the current allowance with ‘value’ (Nat). There is no upper limit for value, you can approve a larger value than you have, but 3rd parties are still bound by the upper limit of your account balance.
 
 ```bash
 dfx canister --network=ic call 5xnja-6aaaa-aaaan-qad4a-cai approve '(record {subaccount=null; allowance=value; spender=principal "toPrincipalId"})'
